@@ -15,6 +15,20 @@
 	});
 
 	$(function() {
+		
+		$("#avatar_img").addClass("animated");
+		$("#avatar_img").click(function() {
+  			$(this).addClass("hinge");
+  			setTimeout(
+  				function() {
+    				$("#avatar_img").removeClass("hinge");
+    				$("#avatar_img").addClass("fadeIn");
+  				}, 5000);
+		});
+		$("#main").addClass("animated slideInUp");
+		if (window.screen.width >= 1280) {
+		$("#header").addClass("animated slideInRight");
+		}
 
 		var $body = $('body'),
 			$header = $('#header'),
@@ -109,5 +123,4 @@
 						.css('transition', 'none');
 
 	});
-
 })(jQuery);
